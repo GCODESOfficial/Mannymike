@@ -22,7 +22,7 @@ export default function WorksSection() {
 
 	return (
 		<section id="my-work" className="bg-[#D9D9D9]">
-			<section className="px-6 md:px-12 md:py-28 py-20 bg-white md:rounded-[2rem]">
+			<section className="px-6 md:px-[9%] md:py-28 py-20 bg-white md:rounded-[2rem]">
 				<div className="flex justify-between items-center md:mb-6 mb-20">
 					<div>
 						<p className="md:text-xl  text-[#C199D7] font-[TTFirsNeueReg]">
@@ -30,9 +30,9 @@ export default function WorksSection() {
 						</p>
 						<h2 className="md:text-5xl text-3xl font-bold">My Works</h2>
 					</div>
-					<button className="bg-[#C199D7] text-xs md:text-base text-black px-8 py-4 font-extrabold cursor-pointer rounded-full font-[TTFirsNeueReg] hover:bg-[#ae8ec076] transition">
+					{/* <button className="bg-[#C199D7] text-xs md:text-base text-black px-8 py-4 font-extrabold cursor-pointer rounded-full font-[TTFirsNeueReg] hover:bg-[#ae8ec076] transition">
 						See All
-					</button>
+					</button> */}
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
@@ -107,7 +107,7 @@ export default function WorksSection() {
 				<a
           href="https://wa.me/+2348104283896"
           target="_blank" 
-		  className="bg-[#C199D7] text-lg  text-black md:px-8 md:py-4 md:block hidden rounded-full cursor-pointer font-[TTFirsNeueReg] hover:bg-[#C199D7] transition">
+		  className="bg-[#C199D7] text-lg   hover:bg-transparent hover:border-[#C199D7] text-black md:px-8 md:py-3 md:block hidden rounded-full cursor-pointer font-[TTFirsNeueReg] hover:border-2 transition">
 						Got a Project? Let’s Talk
 					</a>
 

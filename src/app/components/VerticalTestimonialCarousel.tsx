@@ -73,7 +73,7 @@ export default function VerticalTestimonialCarousel() {
           <a
           href="https://wa.me/+2348104283896"
           target="_blank" 
-          className="bg-[#C199D7] hover:bg-[#b387f2] text-white font-semibold py-2 px-5 rounded-full inline-flex items-center">
+          className="bg-[#C199D7] hover:bg-[#b387f2] text-black font-semibold py-2 px-5 rounded-full inline-flex items-center">
             Hire me <span className="ml-2">→</span>
           </a>
         </div>

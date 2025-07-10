@@ -8,7 +8,7 @@ export default function Footer() {
     <section className="bg-white overflow-hidden">
     <footer className="bg-[#1F1F1F] text-white py-12 pt-20 md:pt-12 px-4 md:px-16 font-[TTFirsNeueReg] rounded-t-[2rem]">
       {/* CTA Section */}
-      <div className="md:flex justify-between mx-auto md:text-center space-y-6">
+      <div className="md:flex justify-between mx-auto md:text-left space-y-6">
         <h2 className="md:text-5xl text-3xl font-semibold leading-tight">
           Have a Project?<br />Let’s Discuss
         </h2>
