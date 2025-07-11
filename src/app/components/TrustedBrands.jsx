@@ -8,17 +8,17 @@ export default function TrustedBrands() {
 //   ];
 
   return (
-    <main className="pt-20 flex items-center px-[10%] bg-white justify-between rounded-3xl shadow-md">
-      <div className='w-[50%]'>
+    <main className="pt-20 block items-center md:flex px-[10%] bg-white justify-between rounded-3xl shadow-md">
+      <div className='w-full md:w-[50%] mb-10 md:mb-0'>
         <h1 className="font-bold mb-3 text-xl">
           Trusted By Brands & <br /> Partners
         </h1>
-        <p className="text-gray-400 w-[50%] text-base">
+        <p className="text-gray-400 w-full md:w-[50%] text-base">
           Over the years, I’ve had the privilege of collaborating with forward-thinking brands, startups, and organizations that value design-driven growth.
         </p>
       </div>
 
-      <div className="w-[50%]">
+      <div className="md:w-[50%] w-full ">
         {/* {brands.map((brand, index) => (
           <Image
             key={index}
@@ -34,7 +34,7 @@ export default function TrustedBrands() {
           alt="Brand 1"
           width={200}
           height={200}
-          className="object-cover w-full"
+          className="object-cover w-full pb-10 md:pb-0"
         />
       </div>
     </main>
