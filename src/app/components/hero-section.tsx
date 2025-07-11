@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const images = ["/images/scroller.svg"];
 import HelloText from "../components/HelloText";
+import HeroExperienceText from "../components/HeroExperienceText";
 
 export default function HeroSection() {
   return (
@@ -45,7 +46,7 @@ export default function HeroSection() {
             />
           </div>
 
-          <p className="mb-4 md:w-sm text-xs md:text-base text-center md:text-left px-10 md:px-0">
+          {/* <p className="mb-4 md:w-sm text-xs md:text-base text-center md:text-left px-10 md:px-0">
             “Working with Manny was a game-changer. His dedication and
             creativity stood out from day one.{" "}
             <strong className="text-black">
@@ -56,7 +57,8 @@ export default function HeroSection() {
           </p>
           <p className="font-semibold text-sm md:text-base text-center md:text-left text-black">
             Patrick King, Project Manager
-          </p>
+          </p> */}
+          <HeroExperienceText />
         </div>
 
         <div className="md:absolute bottom-0 pt-24 md:pt-0">
@@ -123,8 +125,8 @@ export default function HeroSection() {
                   <Image
                     src={src}
                     alt={`Scrolling Image ${i + 1}`}
-                    width={2570} 
-                    height={50} 
+                    width={2570}
+                    height={50}
                     className="w-full"
                   />
                 </div>
