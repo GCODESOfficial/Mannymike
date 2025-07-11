@@ -57,7 +57,7 @@ export default function ServicesSection() {
 				<div className="flex justify-center gap-4 mt-12 flex-wrap">
 				<a
           href="#my-work" 
-		  className="border border-black hidden md:block text-black px-8 py-4 rounded-full hover:bg-black hover:text-white transition">
+		  className="border border-black hidden md:flex text-black px-3 py-3 rounded-full hover:bg-black hover:text-white items-center transition">
 						See My Works
 					</a>
 
@@ -66,7 +66,7 @@ export default function ServicesSection() {
 					<a
           href="https://wa.me/+2348104283896"
           target="_blank" 
-		  className="bg-[#C199D7] text-black px-8 py-4 md:flex items-center hidden rounded-full  hover:bg-[#ae8ec076] transition">
+		  className="bg-[#C199D7] text-black px-4 py-3 md:flex items-center hidden rounded-full  hover:bg-[#ae8ec076] transition">
 						Got a Project? Let’s Talk
             <ArrowRight className="text-black -rotate-45 ml-2" />
 					</a>
