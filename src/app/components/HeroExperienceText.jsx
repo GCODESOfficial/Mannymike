@@ -7,12 +7,12 @@ export default function Testimonials() {
       author: 'Patrick King, Project Manager',
     },
     {
-      quote: `“Manny’s attention to detail and design strategy helped us launch a product that truly resonated with users. Highly recommended for any ambitious team.”`,
-      author: 'Sarah Chen, Product Lead',
+      quote: `“Collaborating with you on design projects is consistently enjoyable. Your adaptability, extensive background, and knack for offering insightful suggestions in brainstorming meetings truly distinguish you. I anticipate engaging in numerous more creative partnerships with you.”`,
+      author: 'Godwin Aniefiok, Web Designer & No-code Developer',
     },
     {
-      quote: `“An exceptional designer with strategic thinking. Manny transformed complex ideas into simple, intuitive designs for our app.”`,
-      author: 'David Smith, Founder & CEO',
+      quote: `“Working with Manny Mike was a game-changer. Their dedication and creativity stood out from day one. They brought fresh, insightful perspectives that significantly enhanced our business UI framework. Absolutely a top-tier designer and collaborator.”`,
+      author: 'Samuel Joseph, Creative Director, Propstake',
     },
   ];
 
