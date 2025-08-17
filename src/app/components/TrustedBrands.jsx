@@ -30,7 +30,7 @@ export default function TrustedBrands() {
           />
         ))} */}
         <Image
-          src="/brands.png"
+          src="/frame.svg"
           alt="Brand 1"
           width={200}
           height={200}

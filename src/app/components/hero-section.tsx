@@ -23,9 +23,9 @@ export default function HeroSection() {
           />
         </div>
 
-        <h1 className="md:text-8xl text-3xl font-bold leading-tight text-center md:text-center">
+        <h1 className="font-clash md:text-8xl text-3xl font-bold leading-tight text-center">
           I’m <span className="text-[#C199D7]">Manny Mike</span>,<br />
-          <span className="text-black">Product Designer</span>
+          <span className="text-black">UI/UX & Brand Designer</span>
         </h1>
       </div>
 

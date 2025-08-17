@@ -25,14 +25,11 @@ export default function WorksSection() {
       <section className="px-6 md:px-[9%] md:py-28 py-20 bg-white md:rounded-[2rem]">
         <div className="flex justify-between items-center md:mb-6 mb-20">
           <div>
-            <p className="md:text-xl  text-[#C199D7] font-[TTFirsNeueReg]">
+            <p className="md:text-xl text-[#C199D7] font-[TTFirsNeueReg]">
               I left a Legacy:
             </p>
             <h2 className="md:text-5xl text-3xl font-bold">My Works</h2>
           </div>
-          {/* <button className="bg-[#C199D7] text-xs md:text-base text-black px-8 py-4 font-extrabold cursor-pointer rounded-full font-[TTFirsNeueReg] hover:bg-[#ae8ec076] transition">
-						See All
-					</button> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
@@ -55,26 +52,35 @@ export default function WorksSection() {
                   className="w-full md:h-full h-[14rem] object-cover transition-transform duration-300"
                 />
 
-                {/* Top-right Arrow */}
-                <Link key={work.title} href={work.href} target="_blank">
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="md:w-10 md:h-10 hidden  w-8 h-8 rounded-full border-[#C199D7] border group-hover:bg-[#C199D7] md:flex items-center justify-center">
-                      <ArrowRight className="text-[#C199D7] group-hover:text-white" />
+                {/* Arrow or Coming Soon Overlay */}
+                {work.href ? (
+                  <Link key={work.title} href={work.href} target="_blank">
+                    <div className="absolute top-4 right-4 z-10">
+                      <div className="md:w-10 md:h-10 hidden w-8 h-8 rounded-full border-[#C199D7] border group-hover:bg-[#C199D7] md:flex items-center justify-center">
+                        <ArrowRight className="text-[#C199D7] group-hover:text-white" />
+                      </div>
+                      <div className="md:w-10 md:h-10 w-8 h-8 rounded-full md:hidden bg-[#C199D7] flex items-center justify-center">
+                        <ArrowRight className="text-white" />
+                      </div>
                     </div>
-                    <div className="md:w-10 md:h-10 w-8 h-8 rounded-full md:hidden bg-[#C199D7] flex items-center justify-center">
-                      <ArrowRight className="text-white" />
-                    </div>
+                  </Link>
+                ) : (
+                  <div className="absolute inset-0 bg-black/60 z-20 flex items-center justify-center">
+                    <span className="text-white font-bold text-lg md:text-2xl">
+                      Coming Soon
+                    </span>
                   </div>
-                </Link>
+                )}
 
-                {/* Bottom-left Title */}
+                {/* Bottom-left Title (Desktop) */}
                 <div className="absolute hidden md:block bottom-4 left-4 z-10 group-hover:-translate-y-32 transition-transform duration-500">
                   <h3 className="text-6xl font-bold text-white transition-all duration-50">
                     {work.title}
                   </h3>
                 </div>
 
-                <div className="absolute bottom-0 md:hidden   px-4 pt-2 bg-[#292929bd]  z-10 w-full h-24">
+                {/* Bottom bar (Mobile) */}
+                <div className="absolute bottom-0 md:hidden px-4 pt-2 bg-[#292929bd] z-10 w-full h-24">
                   <h3 className="md:text-6xl text-3xl font-bold text-white transition-all duration-50">
                     {work.title}
                   </h3>
@@ -83,15 +89,14 @@ export default function WorksSection() {
                   </p>
                 </div>
 
-                {/* Hover Overlay */}
+                {/* Hover Overlay (Desktop) */}
                 <div
                   className={`absolute hidden md:block bottom-0 left-0 right-0 h-56 p-4 z-30 rounded-2xl m-4 transition-transform duration-500 translate-y-60 group-hover:translate-y-0 ${bgColor}`}
                 >
-                  <div className="flex flex-col text-left  mt-2">
+                  <div className="flex flex-col text-left mt-2">
                     <h3 className="text-6xl font-bold text-white">
                       {work.title}
                     </h3>
-
                     <p className="text-white text-sm font-[TTFirsNeueReg] mt-4">
                       {work.subtitle}
                     </p>
@@ -106,7 +111,7 @@ export default function WorksSection() {
           <a
             href="https://wa.me/+2348104283896"
             target="_blank"
-            className="bg-[#C199D7] text-lg   hover:bg-transparent hover:border-[#C199D7] text-black md:px-8 md:py-3 md:block hidden rounded-full cursor-pointer font-[TTFirsNeueReg] hover:border-2 transition"
+            className="bg-[#C199D7] text-lg hover:bg-transparent hover:border-[#C199D7] text-black md:px-8 md:py-3 md:block hidden rounded-full cursor-pointer font-[TTFirsNeueReg] hover:border-2 transition"
           >
             Got a Project? Let’s Talk
           </a>
@@ -114,7 +119,7 @@ export default function WorksSection() {
           <a
             href="https://wa.me/+2348104283896"
             target="_blank"
-            className="bg-[#C199D7] md:hidden  text-black py-3 w-full flex justify-center  rounded-full cursor-pointer font-[TTFirsNeueReg] hover:bg-[#C199D7] transition"
+            className="bg-[#C199D7] md:hidden text-black py-3 w-full flex justify-center rounded-full cursor-pointer font-[TTFirsNeueReg] hover:bg-[#C199D7] transition"
           >
             Got a Project? Let’s Talk
           </a>
