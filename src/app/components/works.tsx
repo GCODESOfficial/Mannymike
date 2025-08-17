@@ -19,6 +19,14 @@ const defaultBg = "bg-gray-600";
 
 export default function WorksSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [comingSoonIndex, setComingSoonIndex] = useState<number | null>(null);
+
+  const handleArrowClick = (work: any, index: number) => {
+    if (!work.href) {
+      setComingSoonIndex(index);
+      setTimeout(() => setComingSoonIndex(null), 2000); // auto-hide after 2s
+    }
+  };
 
   return (
     <section id="my-work" className="bg-[#D9D9D9]">
@@ -36,6 +44,7 @@ export default function WorksSection() {
           {WORKS.map((work, index) => {
             const isHovered = hoveredIndex === index;
             const bgColor = isHovered ? hoverColors[index] : defaultBg;
+            const showComingSoon = comingSoonIndex === index;
 
             return (
               <div
@@ -52,10 +61,24 @@ export default function WorksSection() {
                   className="w-full md:h-full h-[14rem] object-cover transition-transform duration-300"
                 />
 
-                {/* Arrow or Coming Soon Overlay */}
-                {work.href ? (
-                  <Link key={work.title} href={work.href} target="_blank">
-                    <div className="absolute top-4 right-4 z-10">
+                {/* Arrow Button */}
+                <div
+                  onClick={() => handleArrowClick(work, index)}
+                  className="absolute top-4 right-4 z-10"
+                >
+                  {work.href ? (
+                    <Link key={work.title} href={work.href} target="_blank">
+                      <div>
+                        <div className="md:w-10 md:h-10 hidden w-8 h-8 rounded-full border-[#C199D7] border group-hover:bg-[#C199D7] md:flex items-center justify-center">
+                          <ArrowRight className="text-[#C199D7] group-hover:text-white" />
+                        </div>
+                        <div className="md:w-10 md:h-10 w-8 h-8 rounded-full md:hidden bg-[#C199D7] flex items-center justify-center">
+                          <ArrowRight className="text-white" />
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div>
                       <div className="md:w-10 md:h-10 hidden w-8 h-8 rounded-full border-[#C199D7] border group-hover:bg-[#C199D7] md:flex items-center justify-center">
                         <ArrowRight className="text-[#C199D7] group-hover:text-white" />
                       </div>
@@ -63,9 +86,12 @@ export default function WorksSection() {
                         <ArrowRight className="text-white" />
                       </div>
                     </div>
-                  </Link>
-                ) : (
-                  <div className="absolute inset-0 bg-black/60 z-20 flex items-center justify-center">
+                  )}
+                </div>
+
+                {/* Coming Soon Overlay (appears only when clicked) */}
+                {showComingSoon && (
+                  <div className="absolute inset-0 bg-black/70 z-20 flex items-center justify-center">
                     <span className="text-white font-bold text-lg md:text-2xl">
                       Coming Soon
                     </span>
