@@ -18,7 +18,7 @@ export const WORKS = [
     subtitle:
       "From simplified event creation and intuitive ticket sales to real-time revenue tracking and automatic promotions, SimplyEvents delivers a streamlined experience across devices. With its clean interface and focused workflows, the platform helps users plan, manage, and grow their events with ease — turning complexity into clarity, and effort into efficiency.",
     image: "/images/Simplyevents.png",
-    href: "/simplyevents.org",
+    href: "https://www.simply-events.org",
   },
   // {
   //   title: "Falcon Website",
