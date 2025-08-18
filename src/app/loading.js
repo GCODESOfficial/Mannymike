@@ -11,6 +11,7 @@ export default function Loading() {
         width={80} 
         height={80} 
         priority 
+        clssName="w-full object-cover"
       />
     </div>
   );
